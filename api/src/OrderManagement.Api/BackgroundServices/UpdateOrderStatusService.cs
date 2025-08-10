@@ -38,7 +38,7 @@ namespace OrderManagement.Api.BackgroundServices
 
             await useCase.Execute(orderId, Communication.Enums.OrderStatusType.PROCESSING);
 
-            await Task.Delay(TimeSpan.FromSeconds(10));
+            await Task.Delay(TimeSpan.FromSeconds(5));
 
             await useCase.Execute(orderId, Communication.Enums.OrderStatusType.COMPLETED);
 
